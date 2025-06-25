@@ -1,15 +1,161 @@
-title: CV | A jekyll template
-description:  A beautiful template for your CV.
-url: https://jekyll-cv.stavrospanakakis.com
-baseurl: ''
-theme_skin: blue
+# Site
+repository: mridul-sarkar/mridul-sarkar.github.io
+favicon: images/favicon.ico
+
+# Content configuration version
+version: 2
+
+# Personal info
+name: Mridul Sarkar
+title: Machine Learning Engineer | AI x Quantum x Full Stack
+email: mridulsarkarbiz@gmail.com
+website: github.com/mertall
+
+# Dark Mode (true/false/never)
+darkmode: true
+
+# Social links
+github_username: mertall
+linkedin_username: mridul-sarkar
+
+# Additional icon links
+additional_links:
+  - title: Portfolio
+    icon: fas fa-globe
+    url: https://mridul-sarkar.github.io
+
+# About Section
+about_profile_image: images/profile.jpg
+about_content: |
+  I'm a Machine Learning Engineer with 5+ years of experience building intelligent systems across cloud, quantum computing, and AI infrastructure. I specialize in deploying production-grade ML services and exploring the intersection of AI and quantum technologies.
+
+  Key areas: <mark>CLIP</mark>, <mark>SageMaker</mark>, <mark>Tensor Networks</mark>, <mark>Vector Search</mark>, <mark>DSPy</mark>, <mark>PyTorch</mark>, <mark>FastAPI</mark>, <mark>AWS</mark>
+
+content:
+  - title: Projects
+    layout: list
+    content:
+      - layout: top-middle
+        title: VisionSearch – CLIP Inference on SageMaker
+        link: https://github.com/mertall/VisionSearch
+        quote: >
+          Fast image-to-text search powered by a hosted CLIP endpoint and HNSWlib indexing.
+        description: |
+          Deployed CLIP (ViT-B/32) on SageMaker and built a client pipeline to upload, embed, and search images.  
+          Includes auto-scaling and a fallback mechanism for memory-limited environments.
+
+      - layout: top-middle
+        title: CLIP Finetuning on CIFAR-10
+        link: https://github.com/mertall/clip-finetune-cifar10
+        quote: >
+          Achieved +6% gain on CIFAR-10 with contrastive learning using augmented image-text pairs.
+        description: |
+          Fine-tuned CLIP on CIFAR-10 with positive and negative samples using a custom contrastive loss.
+
+      - layout: top-middle
+        title: GiftEval TST + HNSW
+        link: https://github.com/mertall/patchtst_and_hnsw
+        quote: >
+          Vector DB search for time series tasks using Transformer embeddings.
+        description: |
+          Trained a compact Time Series Transformer on GiftEval and integrated it with HNSWlib for similarity retrieval tasks.
+
+      - layout: top-middle
+        title: BlueQubit Hackathon
+        link: https://github.com/mertall/bluequbit_hackathon
+        quote: >
+          8th place out of 600+ for optimizing 60-qubit tensor network simulations.
+        description: |
+          Developed fast contraction trees using Cotengra + Quimb to benchmark quantum circuits. Contributed reproducible logs and solutions.
+
+      - layout: top-middle
+        title: FellowshipFinder
+        link: https://github.com/mertall/FellowshipFinder
+        quote: >
+          AI agent to search and parse university fellowship portals.
+        description: |
+          Modular Python pipeline with unit-tested components. DSPy integration in progress.
+
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        title: Accenture Federal Services
+        sub_title: Associate Manager – Machine Learning Group
+        caption: 06/2024 – 07/2025
+        quote: >
+          Gen AI meets production infrastructure.
+        description: |
+          Led development of vector search and RAG features using Elasticsearch and hosted LLM endpoints.  
+          Partnered with internal teams to deploy scalable backend services and document adoption strategies for enterprise Gen AI usage.
+
+      - layout: left
+        title: Accenture Federal Services
+        sub_title: Specialist – Machine Learning Group
+        caption: 09/2021 – 06/2024
+        quote: >
+          From prototype to production, fast.
+        description: |
+          Created reusable backend infrastructure for search and profile services.  
+          Reduced IaC prototyping time from 8 hrs to 1 hr.  
+          Built NLP-powered FastAPI services for a 2M+ veteran pension tracking tool.
+
+      - layout: left
+        title: MIT Lincoln Laboratory
+        sub_title: Associate Instructor (Quantum)
+        caption: 06/2021 – 09/2021
+        quote: >
+          Empowering the next wave of quantum engineers.
+        description: |
+          Taught Qiskit and quantum algorithms to 50+ students through workshops and demos.
+
+      - layout: left
+        title: Independent Researcher
+        sub_title: ML Engineer (Quantum Focus)
+        caption: 05/2020 – 07/2020
+        quote: >
+          Open-source quantum ML improvements.
+        description: |
+          Increased QCNN accuracy by 10% in a contribution to Pennylane.  
+          [Pull Request](https://github.com/PennyLaneAI/qml/pull/96)
+
+  - title: Education & Certifications
+    layout: list
+    content:
+      - layout: left
+        title: University of California, Davis
+        sub_title: B.S. Computational & Scientific Math
+        caption: 2017 – 2021
+        description: |
+          Research: synthetic protein design, NLP for cloud documentation, satellite control systems.  
+          Led AI workshops and LIDAR geospatial algorithm projects.
+
+      - layout: left
+        title: Databricks
+        sub_title: Generative AI Engineering Associate
+        caption: 2024
+
+      - layout: left
+        title: University of Colorado Boulder
+        sub_title: Advanced Data Structures, RSA, Quantum Algorithms
+        caption: 2024
+
+  - title: A Little More About Me
+    layout: text
+    content: |
+      - Fan of expressive systems, compact models, and fast infra.  
+      - I explore Tensor Networks and AI crossovers for fun.  
+      - Outside work, I love driving, lifting, and teaching.
+
+# Footer
+footer_show_references: true
+
+# Build settings
+remote_theme: sproogen/resume-theme
 
 sass:
   sass_dir: _sass
   style: compressed
 
 plugins:
-    - jekyll-minifier
-
-exclude:
-  - docker-compose.yml
+  - jekyll-seo-tag
